@@ -1,0 +1,14 @@
+.app {
+  height: 100%;
+  width: 100%;
+}
+
+.navbar-brand {
+  height: auto !important;
+  padding: 5px !important;
+}
+
+nav.navbar {
+  background-color: transparent;
+  border-bottom: 0;
+}
