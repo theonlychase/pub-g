@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 // import { Navbar, FormGroup, FormControl, Button } from 'react-bootstrap';
-import { Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom'
 import FontAwesome from 'react-fontawesome';
 
@@ -75,17 +74,12 @@ class Header extends Component {
 
   render() {
 
-    const btnStyle = {
-      background: 'transparent',
-      border: 'none'
-    }
-
     return (
       <header className='header at-top'>
         <div className='top-bar'>
           <div className='branding'>
             <div className='logo'>
-              <Link to='/'><img src={require('../assets/pubg.png')}/></Link>
+              <Link to='/'><img alt='' src={require('../assets/pubg.png')}/></Link>
             </div>
           </div>
           <div onClick={this.handleSearch} className={!this.state.searchToggle ? 'search' : 'search has-query opened'}>

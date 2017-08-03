@@ -26,8 +26,7 @@ class App extends Component {
       <div className="app">
         <Header onSubmit={this.handleSubmit}/>
           <Switch>
-              <Route exact path='/' render={(props) => (<Home {...props} data={username}/>
-)}/>
+              <Route exact path='/' render={(props) => (<Home {...props} data={username}/>)}/>
               <Route exact path='/stats' component={Stats} />
               <Route component={NoMatch}/>
           </Switch>

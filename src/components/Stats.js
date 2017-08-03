@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import { Grid, Row, Col } from 'react-bootstrap';
-import PlayerInput from './PlayerInput';
+import { Row, Col } from 'react-bootstrap';
+import Squad from './Squad';
+import StatsProfile from './StatsProfile';
 import api from '../utils/api';
+import ReactLoading from 'react-loading';
 
 class Stats extends Component {
 	constructor(props) {
@@ -12,26 +14,40 @@ class Stats extends Component {
 		};
 	}
 
+	componentWillMount() {
+		
+	}
+
 	componentDidMount() {
 		var username = this.props.username;
 		
 		api.getData(username)
 			.then(function(data) {
 				console.log(data);
+				this.setState({
+					stats: data,
+					loading: false
+				})
 		}.bind(this));
 	}
 
 	render() {
+		var loading = this.state.loading;
+
+		if (loading) {
+			return <ReactLoading type='spin' className='ma' color='#df9612'/>
+		}
 		return (
-			<Grid>
-				<Row>
-					 <Col md={4}></Col>
-					 <Col md={4} className="text-center">
-					 
-					 </Col>
-				   <Col md={4}></Col>
-			    </Row>
-			</Grid>
+			<Row>
+				<Col md={12}>
+					<StatsProfile stats={this.state.stats} />
+				</Col>
+				<Col md={8}>
+					<Squad stats={this.state.stats} />
+				</Col>
+				<Col md={4}>
+				</Col>
+			</Row>
 		);
 	}
 }
