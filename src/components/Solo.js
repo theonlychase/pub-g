@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'react-bootstrap';
 
-class Squad extends Component {
+class Solo extends Component {
 
 	render() {
-		var naStats = this.props.stats.Stats[7];
+		var naStats = this.props.stats.Stats[0];
 			const styles = {
 				white: { color: '#fff' },
 				gold: { color: '#df9612' },
@@ -26,48 +26,40 @@ class Squad extends Component {
 					<Col xs={12}>
 						<p style={styles.title}>{naStats.Match}</p>
 					</Col>
-					<Col xs={12} md={3}>
-						<div className="ratings">
-							<h4 style={styles.gold}>{naStats.Stats[9].label}</h4>
-							<h2 style={styles.white}>{naStats.Stats[9].value}</h2>
-							<h4 style={styles.gold}>{'#' + naStats.Stats[9].rank + ' in ' + naStats.Region}</h4>
-						</div>
+					<Col xs={3}>
+						<h4 style={styles.gold}>{naStats.Stats[9].label}</h4>
 					</Col>
-					<div className="clearfix visible-xs-block"></div>
-					<Col xs={12} md={9}>
+					<Col xs={9}>
 						<Col xs={6} sm={4}>
 							<h4 style={styles.gold}>{naStats.Stats[0].label}</h4>
 							<h4 style={styles.white}>{naStats.Stats[0].value}</h4>
-							<h4 style={styles.white}>{'(Top ' + naStats.Stats[0].percentile + '%)'}</h4>
+							<h6 style={styles.white}>{'(Top ' + naStats.Stats[0].percentile + '%)'}</h6>
 						</Col>
 						<Col xs={6} sm={4}>
 							<h4 style={styles.gold}>{naStats.Stats[1].label}</h4>
 							<h4 style={styles.white}>{naStats.Stats[1].value + '%'}</h4>
-							<h4 style={styles.white}>{'(Top ' + naStats.Stats[1].percentile + '%)'}</h4>
+							<h6 style={styles.white}>{'(Top ' + naStats.Stats[1].percentile + '%)'}</h6>
 						</Col>
-						<div className="clearfix visible-xs-block"></div>
 						<Col xs={6} sm={4}>
 							<h4 style={styles.gold}>{naStats.Stats[4].label}</h4>
 							<h4 style={styles.white}>{naStats.Stats[4].value}</h4>
-							<h4 style={styles.white}>{'#' + naStats.Stats[4].rank + '- (Top ' + naStats.Stats[4].percentile + '%)'}</h4>
+							<h6 style={styles.white}>{'#' + naStats.Stats[4].rank + '- (Top ' + naStats.Stats[4].percentile + '%)'}</h6>
 						</Col>
 						<Col xs={6} sm={4}>
 							<h4 style={styles.gold}>{naStats.Stats[6].label}</h4>
 							<h4 style={styles.white}>{naStats.Stats[6].value}</h4>
-							<h4 style={styles.white}>{'(Top ' + naStats.Stats[6].percentile + '%)'}</h4>
+							<h6 style={styles.white}>{'(Top ' + naStats.Stats[6].percentile + '%)'}</h6>
 						</Col>
-						<div className="clearfix visible-xs-block"></div>
 						<Col xs={6} sm={4}>
 							<h4 style={styles.gold}>{naStats.Stats[7].label}</h4>
 							<h4 style={styles.white}>{naStats.Stats[7].value + '%'}</h4>
-							<h4 style={styles.white}>{'(Top ' + naStats.Stats[7].percentile + '%)'}</h4>
+							<h6 style={styles.white}>{'(Top ' + naStats.Stats[7].percentile + '%)'}</h6>
 						</Col>
 						<Col xs={6} sm={4}>
 							<h4 style={styles.gold}>{naStats.Stats[21].label}</h4>
 							<h4 style={styles.white}>{naStats.Stats[21].value}</h4>
-							<h4 style={styles.white}>{'#' + naStats.Stats[21].rank + '- (Top ' + naStats.Stats[21].percentile + '%)'}</h4>
+							<h6 style={styles.white}>{'#' + naStats.Stats[21].rank + '- (Top ' + naStats.Stats[21].percentile + '%)'}</h6>
 						</Col>
-						<div className="clearfix visible-xs-block"></div>
 					</Col>
 				</Row>
 			</div>
@@ -75,4 +67,4 @@ class Squad extends Component {
 	}
 }
 
-export default Squad;
+export default Solo;

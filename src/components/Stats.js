@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import Squad from './Squad';
+import Solo from './Solo';
 import StatsProfile from './StatsProfile';
 import api from '../utils/api';
 import ReactLoading from 'react-loading';
@@ -43,6 +44,7 @@ class Stats extends Component {
 					<StatsProfile stats={this.state.stats} />
 				</Col>
 				<Col md={8}>
+					<Solo stats={this.state.stats} />
 					<Squad stats={this.state.stats} />
 				</Col>
 				<Col md={4}>

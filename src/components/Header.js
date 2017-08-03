@@ -17,6 +17,28 @@ class Header extends Component {
 
   componentDidMount() {
     document.addEventListener('click', this.handleClickOutside.bind(this), true);
+    var scrollpos = window.scrollY;
+    var header = document.getElementById("header");
+
+    function add_class_on_scroll() {
+        header.classList.add("nav-up");
+    }
+
+    function remove_class_on_scroll() {
+        header.classList.remove("nav-up");
+    }
+
+    window.addEventListener('scroll', function(){ 
+        //Here you forgot to update the value
+        scrollpos = window.scrollY;
+
+        if(scrollpos > 10){
+            add_class_on_scroll();
+        }
+        else {
+            remove_class_on_scroll();
+        }
+    });
   }
 
   componentWillUnmount() {
@@ -75,7 +97,7 @@ class Header extends Component {
   render() {
 
     return (
-      <header className='header at-top'>
+      <header id="header" className='header at-top'>
         <div className='top-bar'>
           <div className='branding'>
             <div className='logo'>

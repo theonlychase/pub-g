@@ -28,6 +28,14 @@ nav.navbar {
     min-height: 112px;
 }
 
+.header.at-top {
+    background: linear-gradient(to bottom,rgba(0,0,0,.4) 0%,rgba(255,255,255,0) 100%);
+}
+
+.header.nav-up {
+    top: -64px;
+}
+
 .top-bar {
 	height: 64px;
     padding: 8px;
@@ -278,4 +286,10 @@ div.logo {
 
 .ma {
     margin: 0 auto;
+}
+
+.ratings {
+	width: 100%;
+	border-right: 1px solid #df9612;
+	text-align: center;
 }
