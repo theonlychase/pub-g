@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'react-bootstrap';
 
-class StatCard extends Component {
+class Duo extends Component {
 
 	render() {
-		var naStats = this.props.stats.Stats[0];
+		var naStats = this.props.stats.Stats[3];
 
 		console.log('na', naStats);
 		return (
@@ -36,7 +36,7 @@ class StatCard extends Component {
 						<Col xs={6} sm={4}>
 							<h4 className='gold'>{naStats.Stats[4].label}</h4>
 							<h4>{naStats.Stats[4].value}</h4>
-							<h6>{'#' + naStats.Stats[4].rank.toLocaleString() + '- (Top ' + naStats.Stats[4].percentile + '%)'}</h6>
+							<h6>{'#' + naStats.Stats[4].rank + '- (Top ' + naStats.Stats[4].percentile + '%)'}</h6>
 						</Col>
 						<Col xs={6} sm={4}>
 							<h4 className='gold'>{naStats.Stats[6].label}</h4>
@@ -52,7 +52,7 @@ class StatCard extends Component {
 						<Col xs={6} sm={4}>
 							<h4 className='gold'>{naStats.Stats[21].label}</h4>
 							<h4>{naStats.Stats[21].value}</h4>
-							<h6>{'#' + naStats.Stats[21].rank.toLocaleString() + '- (Top ' + naStats.Stats[21].percentile + '%)'}</h6>
+							<h6>{'#' + naStats.Stats[21].rank + '- (Top ' + naStats.Stats[21].percentile + '%)'}</h6>
 						</Col>
 						<div className="clearfix visible-xs-block"></div>
 					</Col>
@@ -62,4 +62,4 @@ class StatCard extends Component {
 	}
 }
 
-export default StatCard;
+export default Duo;

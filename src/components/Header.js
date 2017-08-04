@@ -29,10 +29,10 @@ class Header extends Component {
     }
 
     window.addEventListener('scroll', function(){ 
-        //Here you forgot to update the value
+
         scrollpos = window.scrollY;
 
-        if(scrollpos > 10){
+        if(scrollpos > 75){
             add_class_on_scroll();
         }
         else {

@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'react-bootstrap';
+import StatCard from './StatCard';
 import Squad from './Squad';
 import Solo from './Solo';
+import Duo from './Duo';
 import StatsProfile from './StatsProfile';
 import api from '../utils/api';
 import ReactLoading from 'react-loading';
@@ -44,7 +46,9 @@ class Stats extends Component {
 					<StatsProfile stats={this.state.stats} />
 				</Col>
 				<Col md={8}>
+					<StatCard stats={this.state.stats} />
 					<Solo stats={this.state.stats} />
+					<Duo stats={this.state.stats} />
 					<Squad stats={this.state.stats} />
 				</Col>
 				<Col md={4}>
